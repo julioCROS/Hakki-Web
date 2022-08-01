@@ -1,0 +1,33 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: -100px;
+}
+
+
+.title {
+  margin: 0;
+  font-size: 140px;
+  font-family: 'Six Caps', sans-serif;
+  font-weight: lighter;
+  color: #404E82;
+  transform: scale(1, .8);
+}
+
+.subtitle {
+  margin-top: -70px;
+  font-size: 60px;
+  font-family: 'Black Han Sans', sans-serif;
+  font-weight: bolder;  
+  color: rgb(255, 255, 255);
+  -webkit-text-stroke: #404e8258 1px;
+  text-align: center;  
+  transform: scale(.8, 1);
+}
+
+.title,
+.subtitle {
+  text-align: center;
+}

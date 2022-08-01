@@ -1,0 +1,165 @@
+.noDataFound {
+  font-size: 20px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bolder;  
+  color: #959595;
+  text-align: center;  
+  transform: scale(.8, 1);
+  font-weight: 100;
+  font-style: italic;
+  
+}
+
+.resultBox {
+  width: 45%;
+}
+
+.professorBox {
+  cursor: pointer;
+  margin-top: 30px;
+  padding: 10px;
+}
+
+.mainInfo {
+  display: flex;
+  justify-content: space-between
+}
+
+.name { 
+  font-size: 20px;
+}
+
+.values { 
+  display: flex;
+  text-align: right;
+}
+
+.values p {
+  text-align: center;
+  margin: 3px;
+  color: #09083a;
+  background-color: #b5b5b5;
+  width: 40px;
+  border-radius: 3px;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 4px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.goodAvg {
+  background-color: #40c74f !important;
+}
+
+.neutralAvg {
+  background-color: #d4912c !important;
+}
+
+.chaoticAvg {
+  background-color: #ff3333 !important;
+}
+
+.reviewInfo {
+  margin-top: -30px;
+  font-style: italic;
+  font-size: 13px;
+}
+
+.paginate {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+@media(max-width: 1300px) {
+  .resultBox {
+    width: 60%;
+  }
+}
+
+@media(max-width: 1110px) {
+  .resultBox {
+    width: 70%;
+  }
+}
+
+@media(max-width: 990px) {
+  .resultBox {
+    width: 80%;
+  }
+}
+
+@media(max-width: 860px) {
+  .resultBox {
+    width: 95%;
+  }
+}
+
+@media(max-width: 860px) {
+  .professorBox {
+    padding: 0px;
+  }
+
+  .name { 
+    font-size: 15px;
+  }
+
+  .values p {
+    margin: 2px;
+    width: 35px;
+    border-radius: 3px;
+    font-size: 13px;
+    padding: 3px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+  }
+
+  .reviewInfo {
+    margin-top: -37px;
+    font-size: 12px;
+  }
+}
+
+@media(max-width: 590px) {
+  .resultBox {
+    width: 100%;
+  }
+
+  .name { 
+    font-size: 13px;
+    max-width: 60%;
+    margin-right: 5px;
+  }
+
+  .values p {
+    margin: 2px;
+    width: 35px;
+  }
+}
+
+
+@media(max-width: 525px) {
+  .reviewInfo {
+    margin-top: -17px;
+  }
+}
+
+@media(max-width: 300px) {
+  .name { 
+    font-size: 10px;
+    max-width: 60%;
+    margin-right: 5px;
+  }
+
+  .values p {
+    margin: 1px;
+    width: 30px;
+    font-size: 10px;
+  }
+
+  .reviewInfo {
+    margin-top: -5px;
+    font-size: 9px;
+  }
+}
