@@ -34,6 +34,11 @@ export default function Home({ data }) {
       <main className={styles.main}>
         <Title />
         <SearchBar
+          style={{
+            fontFamily: 'Ubuntu, sans-serif',
+            boxShadow: '1px 1px 2px #0202022a',
+            borderRadius: '10px',
+          }}
           placeholder="Buscar professor..."
           value={search}
           onChange={(newValue) => {

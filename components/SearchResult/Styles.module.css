@@ -5,7 +5,6 @@
   color: #959595;
   text-align: center;  
   transform: scale(.8, 1);
-  font-style: italic;
 }
 
 .resultBox {
@@ -20,7 +19,7 @@
 
 .mainInfo {
   display: flex;
-  justify-content: space-between
+  justify-content: space-between;
 }
 
 .name { 

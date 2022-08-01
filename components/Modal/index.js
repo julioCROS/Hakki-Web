@@ -70,7 +70,7 @@ function renderSucess(){
   return (
     <div className={styles.alert}>
         <Alert severity="success" variant='outlined'>
-          Nome cadastrado com sucesso!
+          Professor cadastrado com sucesso!
         </Alert>        
     </div>
   )
@@ -80,7 +80,7 @@ function renderFail(res){
   if(res == 400) {
     return (
       <div className={styles.alert}>
-        <Alert severity="error" variant='outlined'>Nome já cadastrado.</Alert>
+        <Alert severity="error" variant='outlined'>Professor já cadastrado.</Alert>
       </div>
     )
   } else if(res == 500) {

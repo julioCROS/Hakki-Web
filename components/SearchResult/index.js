@@ -6,7 +6,7 @@ export default function SearchResult({ professores, data, page, setPage }) {
   let professoresPag = professores.slice((page - 1) * 5, page * 5);
 
   if(professores.length == 0) {
-    return (<p className={styles.noDataFound}>Nenhum nome encontrado.</p>)
+    return (<p className={styles.noDataFound}>Nenhum nome correspondente encontrado.</p>)
   } else if(professores.length == data.length) {
     return null
   } else {
