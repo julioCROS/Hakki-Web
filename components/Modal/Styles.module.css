@@ -1,18 +1,17 @@
-
 .modalTitle {
   width: 100%;
-  margin-top: -5px;
-  margin-right: 300px;
-  font-size: 6px;
-  font-family: 'Roboto', sans-serif;
+  margin-top: -20px;
+  margin-bottom: 20px;
+  margin-right: 260px;
+  font-size: 13px;
+  font-family: 'Ubuntu', sans-serif;
   text-align: left;  
   font-weight: lighter;
-  font-style: italic;
 }
 
 .modalBody {
   width: 100%;
-  margin-top: 20px;
+  margin-top: -10px;
   font-size: 15px;
 }
 
@@ -34,13 +33,19 @@
   color: white;
   border: none;
   margin-top: 5px;
-  margin-left: 10px;
+  margin-left: 5px;
   padding: 10px;
   font-size: 25px;
   font-family: 'Roboto', sans-serif;
-  border-radius: 3px;
+  border-radius: 5px;
   cursor: pointer;
   width: 40px;
+}
+
+.btn:active {
+  background-color: #bebebe;
+  color: #404E82;
+  box-shadow: 0 0 7px #5e5e5e77;
 }
 
 .response {

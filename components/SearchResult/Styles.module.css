@@ -1,13 +1,11 @@
 .noDataFound {
   font-size: 20px;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Ubuntu', sans-serif;
   font-weight: bolder;  
   color: #959595;
   text-align: center;  
   transform: scale(.8, 1);
-  font-weight: 100;
   font-style: italic;
-  
 }
 
 .resultBox {
@@ -27,6 +25,7 @@
 
 .name { 
   font-size: 20px;
+  font-family: 'Ubuntu', sans-serif;
 }
 
 .values { 
@@ -35,12 +34,13 @@
 }
 
 .values p {
+  font-family: 'Ubuntu', sans-serif;
   text-align: center;
   margin: 3px;
   color: #09083a;
   background-color: #d1d0d0;
   width: 40px;
-  border-radius: 3px;
+  border-radius: 5px;
   font-size: 16px;
   font-weight: 500;
   padding: 4px;

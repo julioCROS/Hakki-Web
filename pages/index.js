@@ -34,7 +34,7 @@ export default function Home({ data }) {
       <main className={styles.main}>
         <Title />
         <SearchBar
-          placeholder="Buscar nome..."
+          placeholder="Buscar professor..."
           value={search}
           onChange={(newValue) => {
             setSearch(newValue);
@@ -47,7 +47,7 @@ export default function Home({ data }) {
             setPage(1);
           }}
         />       
-        <p className={styles.cadastrar} onClick={() => {onOpenModal()}}>Cadastrar nome</p>
+        <p className={styles.cadastrar} onClick={() => {onOpenModal()}}>Cadastrar professor</p>
         <Modal open={open} setOpen={setOpen} />
         <SearchResult professores={professores} data={data} page={page} setPage={setPage} />
       </main>

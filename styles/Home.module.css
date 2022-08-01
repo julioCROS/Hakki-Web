@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Six+Caps&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Black+Han+Sans:400');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
 
 .container {
   padding: 0 2rem;
@@ -16,17 +15,20 @@
 }
 
 .cadastrar {
-  font-size: 20px;
-  font-family: 'Roboto', sans-serif;
+  min-width: 220px;
+  font-size: 19px;
+  font-family: 'Ubuntu', sans-serif;
   font-weight: bolder;  
-  color: #404E82;
-  text-align: center;  
-  transform: scale(.8, 1);
-  font-weight: 600;
-  
+  color: #f5f5f5;
+  text-align: center; 
+  transform: scale(1, 1);
+  font-weight: lighter;
+  background-color: #404E82;
+  padding: 10px;
+  border-radius: 20px;
 }
 
 .cadastrar:hover {
-  color: #404E82;
+  color: rgb(255, 255, 255);
   cursor: pointer;
 }

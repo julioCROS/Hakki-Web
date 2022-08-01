@@ -39,7 +39,7 @@ export default function ModalForms({ open, setOpen }) {
     <Modal open={open} onClose={onCloseModal} center> 
       <div className={styles.modal}>
         <div className={styles.modalTitle}>
-          <h2>Cadastrar nome</h2>
+          <h2>Cadastrar professor</h2>
         </div>  
         <div className={styles.modalBody}>
           <div className={styles.inputSend}>
