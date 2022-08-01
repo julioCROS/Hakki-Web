@@ -29,7 +29,7 @@ export default function Home({ data }) {
       <Head>
         <title>Hakki</title>
         <meta name="description" content="Obtenha avaliações dos professores de suas proximas matérias e envie também suas avaliações." />
-        <link rel="icon" href="/icon.png" />
+        <link rel="icon" href="/logo.ico" />
       </Head>
       <main className={styles.main}>
         <Title />
