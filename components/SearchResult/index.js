@@ -13,17 +13,19 @@ export default function SearchResult({ professores, data, page, setPage }) {
     return (
       <div className={styles.resultBox}>
         {professoresPag.map(professor => (
-          <div className={styles.professorBox} key={professor.id}>
-            <div className={styles.mainInfo}>
-              <p className={styles.name}>{professor.nome}</p>
-              <p className={styles.values}>
-                {professor.mediaQualidade == null ? <p>X</p> : professor.mediaQualidade >= 7 ? <p className={styles.goodAvg}>{professor.mediaQualidade}</p> :professor.mediaQualidade >= 5 ? <p className={styles.neutralAvg}>{professor.mediaQualidade}</p> : <p className={styles.chaoticAvg}>{professor.mediaQualidade}</p>}
-                {professor.mediaFacilitacao == null ? <p>X</p> : professor.mediaFacilitacao >= 7 ? <p className={styles.goodAvg}>{professor.mediaFacilitacao}</p> :professor.mediaFacilitacao >= 5 ? <p className={styles.neutralAvg}>{professor.mediaFacilitacao}</p> : <p className={styles.chaoticAvg}>{professor.mediaFacilitacao}</p>}
-                {professor.mediaQualidade == null  ? <p>X</p> : ((professor.mediaQualidade + professor.mediaFacilitacao) / 2) >= 7 ? <p className={styles.goodAvg}>{((professor.mediaQualidade + professor.mediaFacilitacao) / 2)}</p> :((professor.mediaQualidade + professor.mediaFacilitacao) / 2) >= 5 ? <p className={styles.neutralAvg}>{((professor.mediaQualidade + professor.mediaFacilitacao) / 2)}</p> : <p className={styles.chaoticAvg}>{((professor.mediaQualidade + professor.mediaFacilitacao) / 2)}</p>}
-              </p>
+          <a href={`/docente/${slugName(professor.nome)}`} key={professor._id} >
+            <div className={styles.professorBox}>
+              <div className={styles.mainInfo}>
+                <p className={styles.name}>{professor.nome}</p>
+                <p className={styles.values}>
+                  {professor.mediaQualidade == null ? <p>X</p> : professor.mediaQualidade >= 7 ? <p className={styles.goodAvg}>{professor.mediaQualidade}</p> :professor.mediaQualidade >= 5 ? <p className={styles.neutralAvg}>{professor.mediaQualidade}</p> : <p className={styles.chaoticAvg}>{professor.mediaQualidade}</p>}
+                  {professor.mediaFacilitacao == null ? <p>X</p> : professor.mediaFacilitacao >= 7 ? <p className={styles.goodAvg}>{professor.mediaFacilitacao}</p> :professor.mediaFacilitacao >= 5 ? <p className={styles.neutralAvg}>{professor.mediaFacilitacao}</p> : <p className={styles.chaoticAvg}>{professor.mediaFacilitacao}</p>}
+                  {professor.mediaQualidade == null  ? <p>X</p> : ((professor.mediaQualidade + professor.mediaFacilitacao) / 2) >= 7 ? <p className={styles.goodAvg}>{((professor.mediaQualidade + professor.mediaFacilitacao) / 2)}</p> :((professor.mediaQualidade + professor.mediaFacilitacao) / 2) >= 5 ? <p className={styles.neutralAvg}>{((professor.mediaQualidade + professor.mediaFacilitacao) / 2)}</p> : <p className={styles.chaoticAvg}>{((professor.mediaQualidade + professor.mediaFacilitacao) / 2)}</p>}
+                </p>
+              </div>
+              <p className={styles.reviewInfo}>Avaliações: {professor.reviews.length}</p>
             </div>
-            <p className={styles.reviewInfo}>Avaliações: {professor.reviews.length}</p>
-          </div>
+          </a>
         ))}
          <div className={styles.paginate}>
          <Pagination count={pageCount} page={page} onChange={(event, value) => {
@@ -33,4 +35,8 @@ export default function SearchResult({ professores, data, page, setPage }) {
       </div>
     )
   }
+}
+
+function slugName(name) {
+  return name.toLowerCase().replace(/ /g, '-');
 }
