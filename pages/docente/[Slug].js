@@ -1,5 +1,6 @@
 import axios from 'axios';
 import { useState } from 'react';
+import Head from 'next/head';
 import styles from '../../styles/Docente.module.css';
 import { makeStyles } from "@material-ui/core/styles";
 
@@ -55,6 +56,11 @@ export default function Docente({ data }) {
   else {
     return(
       <div className={styles.main}>
+      <Head>
+        <title>Hakki - {normalizeName(professor.nome)}</title>
+        <meta name="description" content="Obtenha avaliações dos professores de suas proximas matérias e envie também suas avaliações." />
+        <link rel="icon" href="/logo.ico" />
+      </Head>
         <Title />
         <div className={styles.container}>
           <div className={styles.content}>
@@ -77,4 +83,13 @@ export default function Docente({ data }) {
       </div>
     )
   }
+}
+
+function normalizeName(name) {
+  let normalizedName = name.toLowerCase();
+  normalizedName = normalizedName.replace(/\s\S/g, function(l) {
+    return l.toUpperCase();
+  });
+  normalizedName = normalizedName[0].toUpperCase() + normalizedName.slice(1);
+  return normalizedName;
 }
