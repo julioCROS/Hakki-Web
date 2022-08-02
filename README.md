@@ -1,34 +1,21 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Contribuindo com o projeto
 
-## Getting Started
+**1.** Primeiro, clone o projeto no diretório de sua preferência:
+```bash
+git clone https://github.com/julioCROS/Hakki-Web
+```
 
-First, run the development server:
-
+**2.** Entrando na pasta do projeto clonado, você pode então executar o projeto a partir dos seguintes comandos:
 ```bash
 npm run dev
-# or
+# ou
 yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+**3.** Abra [`localhost:3000`](http://localhost:3000) com o seu browser para ver o resultado.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+Você agora é capaz de editar o projeto a sua vontade, desde elaborar páginas novas, modificar páginas existentes, entre muitas outras coisas. Caso queira subir para este repositório algumas novas funcionalidades criadas por você, abra um [Pull Request](https://docs.github.com/pt/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request).
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+>Caso queira contribuir com o projeto, é interessante você passar pelos outros dois projetos ligado ao Sistema Hakki:
+> - [**Hakki API**](https://github.com/julioCROS/Hakki-API) - API criada para armazenar os dados (professores e suas avaliações) enviadas a partir do site ([**Hakki Web**](https://github.com/julioCROS/Hakki-Web/)).
+> - [**Hakki Chrome Extension**](https://github.com/julioCROS/Hakki-Extension) - Extensão criada para injetar um script na página de matricula do SIGAA alimentado pela API para mostrar as notas referente aos professores.
