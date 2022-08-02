@@ -1,15 +1,15 @@
 import styles from './Styles.module.css';
 import Pagination from '@mui/material/Pagination';
 
-export default function SearchResult({ professores, data, page, setPage }) {
-  let pageCount = Math.ceil(professores.length / 5);
-  let professoresPag = professores.slice((page - 1) * 5, page * 5);
+export default function SearchResult({ professoresSearch, data, page, setPage, search }) {
+  let pageCount = Math.ceil(professoresSearch.length / 5);
+  let professoresPag = professoresSearch.slice((page - 1) * 5, page * 5);
 
-  if(professores.length == 0) {
+  if (professoresSearch.length == 0) {
     return (<p className={styles.noDataFound}>Nenhum nome correspondente encontrado.</p>)
-  } else if(professores.length == data.length) {
+  } else if(professoresSearch.length == data.length) {
     return null
-  } else {
+  } else if (search.length >= 3) {
     return (
       <div className={styles.resultBox}>
         {professoresPag.map(professor => (

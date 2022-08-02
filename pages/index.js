@@ -19,10 +19,11 @@ Home.getInitialProps = async () => {
 export default function Home({ data }) {
   const [search, setSearch] = useState("");
   const [open, setOpen] = useState(false);
-  const [professores, setProfessores] = useState(data);
+  const [professoresSearch, setProfessoresSearch] = useState(data);
   const [page, setPage] = useState(1);
 
   const onOpenModal = () => setOpen(true);
+  data = sortData(data);
 
   return (
     <div className={styles.container}>
@@ -43,18 +44,18 @@ export default function Home({ data }) {
           value={search}
           onChange={(newValue) => {
             setSearch(newValue);
-            setProfessores(searchQuery(newValue, data));
+            setProfessoresSearch(searchQuery(newValue, data));
             setPage(1);
           }}
           onCancelSearch={() => {
             setSearch("");
-            setProfessores(data);
+            setProfessoresSearch(data);
             setPage(1);
           }}
         />       
         <p className={styles.cadastrar} onClick={() => {onOpenModal()}}>Cadastrar professor</p>
         <Modal open={open} setOpen={setOpen} />
-        <SearchResult professores={professores} data={data} page={page} setPage={setPage} />
+        <SearchResult professoresSearch={professoresSearch} data={data} page={page} setPage={setPage} search={search} />
       </main>
       <Extension />
     </div>
@@ -64,10 +65,19 @@ export default function Home({ data }) {
 function searchQuery(e, data) {
   e = e.toLowerCase();
   let res = data.filter(professor => professor.nome.toLowerCase().includes(e));
-  res.sort((a, b) => {
-    if (a.nome < b.nome) return -1;
-    if (a.nome > b.nome) return 1;
-    return 0;
-  });
   return res;
+}
+
+function sortData(data) {
+  data.sort((a, b) => {
+    if (a.nome < b.nome) {
+      return -1;
+    }
+    if (a.nome > b.nome) {
+      return 1;
+    }
+    return 0;
+  }
+  );
+  return data;
 }
