@@ -1,5 +1,3 @@
-Este é um projeto [Next.js](https://nextjs.org/) desenvolvido com [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
-
 ## Contribuindo com o projeto
 
 **1.** Primeiro, clone o projeto no diretório de sua preferência:
