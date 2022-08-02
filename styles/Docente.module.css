@@ -40,11 +40,12 @@
 }
 
 .mainInfo {
-  font-size: 40px;
+  font-size: 30px;
   font-family: 'Ubuntu', sans-serif;
   text-align: center;
   margin-top: 3px;
   font-weight: bold;
+  min-width: 25%;
 }
 
 .secondInfo {
@@ -58,13 +59,13 @@
 .reviewsInfo {
   font-style: italic;
   font-family: 'Roboto', sans-serif;
-  font-size: 20px;
+  font-size: 17px;
   margin-top: 6px;
 }
 
 .cadastrar {
-  min-width: 30%;
-  font-size: 18px;
+  min-width: 37%;
+  font-size: 17px;
   font-family: 'Ubuntu', sans-serif;
   font-weight: bolder;  
   color: #f5f5f5;
@@ -96,11 +97,12 @@
   min-width: 25%;
   font-family: 'Ubuntu', sans-serif;
   text-align: center;
+  font-weight: bold;
   color: #09083a;
   background-color: #d1d0d0;
   border-radius: 10px;
-  font-size: 40px;
-  padding: 20px;
+  font-size: 30px;
+  padding: 12px;
   padding-left: 35px;
   padding-right: 35px;;
   margin: 5px;

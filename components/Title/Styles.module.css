@@ -7,7 +7,7 @@
 
 .title {
   margin: 0;
-  font-size: 140px;
+  font-size: 160px;
   font-family: 'Six Caps', sans-serif;
   font-weight: lighter;
   color: #404E82;
@@ -15,8 +15,8 @@
 }
 
 .subtitle {
-  margin-top: -70px;
-  font-size: 60px;
+  margin-top: -80px;
+  font-size: 70px;
   font-family: 'Black Han Sans', sans-serif;
   font-weight: bolder;  
   color: rgb(255, 255, 255);
