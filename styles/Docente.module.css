@@ -4,7 +4,7 @@
   flex: 1;
   display: flex;
   flex-direction: column;
-  padding-top: 10%;
+  padding-top: 5%;
 }
 
 .noDataFound {
@@ -45,7 +45,6 @@
   text-align: center;
   margin-top: 3px;
   font-weight: bold;
-  min-width: 25%;
 }
 
 .secondInfo {
@@ -64,7 +63,6 @@
 }
 
 .cadastrar {
-  min-width: 37%;
   font-size: 17px;
   font-family: 'Ubuntu', sans-serif;
   font-weight: bolder;  
@@ -75,6 +73,8 @@
   background-color: #404E82;
   padding: 6px;
   border-radius: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .cadastrar:hover {
@@ -119,3 +119,78 @@
 .chaoticAvg {
   background-color: #ff3333 !important;
 }
+
+@media(max-width: 1270px){
+  .content {
+    flex-direction: column;
+  }
+
+  .mainInfo {
+    width: 100%;
+  }
+
+  .secondInfo {
+    justify-content: center;
+  }
+
+  .reviewsInfo {
+    margin-right: 30px;
+  }
+
+  .averages {
+    margin-top: 5px;
+  }
+}
+
+@media(max-width:1100px){
+  .main {
+    margin-top: 10%;
+  }
+}
+
+@media(max-width:768px){
+  .mainInfo {
+    margin-top: -35px;
+    font-size: 25px;
+  }
+}
+
+@media(max-width: 412px){
+  .main {
+    padding-top: 15%;
+  }
+
+  .secondInfo {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .reviewsInfo {
+    margin-right: 0px;
+  }
+
+  .cadastrar {
+    font-size: 15px;
+    margin-top: 5px;
+  }
+}
+
+@media(max-width: 325px){
+  .mainInfo {
+    font-size: 20px;
+  }
+
+  .reviewsInfo {
+    font-size: 15px;
+  }
+
+  .values p {
+    min-width: 25%;
+    font-size: 25px;
+    padding: 10px;
+    padding-left: 25px;
+    padding-right: 25px;;
+    margin: 3px;
+  }
+}
+
