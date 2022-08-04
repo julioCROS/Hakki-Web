@@ -1,0 +1,102 @@
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 80%;
+  justify-content: center;
+  margin-top: 60px;
+}
+
+
+.review {
+  background-color: #dcdbdb57;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.079);
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: space-between;
+  padding: 20px;
+  margin: 15px;
+  width: 300px;
+  border-radius: 10px;
+}
+
+.text {
+  font-size: 17px;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+}
+
+.date {
+  font-style: italic;
+  margin-top: 10px; 
+  font-size: 15px; 
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.averagesAndDate {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.values { 
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+
+.values p {
+  min-width: 20%;
+  font-family: 'Ubuntu', sans-serif;
+  text-align: center;
+  font-weight: bold;
+  color: #09083a;
+  background-color: #d1d0d0;
+  border-radius: 10px;
+  font-size: 25px;
+  padding: 12px;
+  padding-left: 25px;
+  padding-right: 25px;;
+  margin: 3px;
+  margin-top: 10px;
+}
+
+.goodAvg {
+  background-color: #40c74f !important;
+}
+
+.neutralAvg {
+  background-color: #d4912c !important;
+}
+
+.chaoticAvg {
+  background-color: #ff3333 !important;
+}
+
+.paginate {
+  margin-top: 20px;
+}
+
+@media (max-width: 1270px) {
+  .container {
+    width: 95%;
+  }
+}
+
+@media (max-width: 425px) {
+  .review {
+    width: 90%;
+  }
+}
+
+@media (max-width: 320px) {
+  .text {
+    font-size: 15px;
+  }
+
+  .date {
+    font-size: 13px;
+  }
+}

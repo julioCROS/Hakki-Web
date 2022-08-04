@@ -1,4 +1,5 @@
 import styles from './Styles.module.css';
+
 import Pagination from '@mui/material/Pagination';
 
 export default function SearchResult({ professoresSearch, data, page, setPage, search }) {

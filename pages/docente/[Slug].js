@@ -6,9 +6,9 @@ import { makeStyles } from "@material-ui/core/styles";
 
 import Title from '../../components/Title';
 import Tooltip, { tooltipClasses } from '@mui/material/Tooltip';
+import Reviews from '../../components/Reviews';
 
 const apiUrl_professores = 'https://hakki-api.herokuapp.com/professores';
-const apiUrl_reviews = 'https://hakki-api.herokuapp.com/reviews';
 
 const useStyles = makeStyles(theme => ({
   arrow: {
@@ -79,6 +79,7 @@ export default function Docente({ data }) {
               </div>
             </div>
           </div>
+          <Reviews data={professor.reviews} />
         </div>
       </div>
     )
