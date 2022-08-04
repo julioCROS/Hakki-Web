@@ -92,7 +92,7 @@ function renderFail(res){
   } else {
     return (
       <div className={styles.alert}>
-        <Alert severity="warning" variant='outlined'>Erro no servidor.</Alert>
+        <Alert severity="warning" variant='outlined'>Erro no servidor! Tente novamente.</Alert>
       </div>
     )
   }
