@@ -26,14 +26,19 @@ const useStyles = makeStyles(theme => ({
 }));
 
 export default function Reviews ({ data }) {
+  if(data.length == 0) return(renderError())
+  else return(RenderReviewsCard(data))
+}
+
+function RenderReviewsCard(data){
   const [page, setPage] = useState(1);
   let pageCount = Math.ceil(data.length / 8);
   let reviewsPag = data.slice((page - 1) * 8, page * 8);
+  const toolTipClasses = useStyles();  
 
-  const toolTipClasses = useStyles();    
-  return (
+  return(
     <>
-      <div className={styles.container}>
+    <div className={styles.container}>
         {reviewsPag.map((review, index) => (
           <div className={styles.review} key={index}>
             <div className={styles.text}>
@@ -57,7 +62,17 @@ export default function Reviews ({ data }) {
       }}/>
       </div>
     </>
-  );
+  )
+}
+
+function renderError(){
+  return(
+    <>
+    <div className={styles.error}>
+      <p>Não há nenhuma avaliação para este docente. Tente cadastrar uma.</p>
+    </div>
+    </>
+  )
 }
 
 function formatDate(date) {

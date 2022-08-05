@@ -79,6 +79,16 @@
   margin-top: 20px;
 }
 
+.error {
+  margin-top: 50px;
+  font-size: 25px;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: bolder;  
+  color: #959595;
+  text-align: center;  
+  transform: scale(.8, 1);
+}
+
 @media (max-width: 1270px) {
   .container {
     width: 95%;
