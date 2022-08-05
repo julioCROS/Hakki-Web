@@ -8,18 +8,25 @@
 }
 
 .noDataFound {
+  margin-top: -10px;
   font-size: 40px;
   font-family: 'Ubuntu', sans-serif;
   font-weight: bolder;  
   color: #959595;
   text-align: center;  
   transform: scale(.8, 1);
+  margin-bottom: 70px;
 }
 
 .backString {
-  margin-top: -35px;
+  margin-top: -65px;
   font-size: 17px;
-  text-align: center;
+  font-size: 30px;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: bolder;  
+  color: #535353;
+  text-align: center;  
+  margin-bottom: 60px;
 }
 
 .container {

@@ -67,6 +67,7 @@ export default function Docente({ data }) {
         <link rel="icon" href="/logo.ico" />
       </Head>
         <Title />
+        <p className={styles.backString}><a href="../">Inicio</a></p>
         <div className={styles.container}>
           <div className={styles.content}>
             <div className={styles.mainInfo}>
