@@ -5,7 +5,7 @@ import styles from '../styles/Home.module.css';
 
 import Title from '../components/Title';
 import SearchBar from 'material-ui-search-bar';
-import Modal from '../components/Modal';
+import ModalProf from '../components/ModalProf';
 import SearchResult from '../components/SearchResult';
 import Extension from '../components/Extension';
 
@@ -54,7 +54,7 @@ export default function Home({ data }) {
           }}
         />       
         <p className={styles.cadastrar} onClick={() => {onOpenModal()}}>Cadastrar professor</p>
-        <Modal open={open} setOpen={setOpen} />
+        <ModalProf open={open} setOpen={setOpen} />
         <SearchResult professoresSearch={professoresSearch} data={data} page={page} setPage={setPage} search={search} />
       </main>
       <Extension />

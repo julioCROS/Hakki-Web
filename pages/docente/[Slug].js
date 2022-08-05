@@ -6,6 +6,7 @@ import { makeStyles } from "@material-ui/core/styles";
 
 import Title from '../../components/Title';
 import Tooltip, { tooltipClasses } from '@mui/material/Tooltip';
+import ModalAval from '../../components/ModalAval';
 import Reviews from '../../components/Reviews';
 
 const apiUrl_professores = 'https://hakki-api.herokuapp.com/professores';
@@ -41,8 +42,12 @@ Docente.getInitialProps = async (context) => {
   
 
 export default function Docente({ data }) { 
+  const [open, setOpen] = useState(false);
   const [professor, setProfessor] = useState(data);
+
   const toolTipClasses = useStyles();  
+
+  const onOpenModal = () => setOpen(true);
 
   if(data.length === 0) {
     return (
@@ -68,14 +73,15 @@ export default function Docente({ data }) {
               {professor.nome}
               <div className={styles.secondInfo}>
                 <div className={styles.reviewsInfo}><b>Avaliações:</b> {professor.reviews.length}</div>
-                <div className={styles.cadastrar}>Cadastrar avaliação</div>
+                <div className={styles.cadastrar} onClick={() => {onOpenModal()}}>Cadastrar avaliação</div>
+                <ModalAval open={open} setOpen={setOpen}  professor_id={professor._id}/>
               </div>
             </div>
             <div className={styles.averages}>
               <div className={styles.values}>
-              <Tooltip classes={{ arrow: toolTipClasses.arrow, tooltip: toolTipClasses.tooltip }} disableFocusListener disableTouchListener title="Qualidade" placement="top" arrow>{professor.mediaQualidade == null ? <p>X</p> : professor.mediaQualidade >= 7 ? <p className={styles.goodAvg}>{professor.mediaQualidade}</p> :professor.mediaQualidade >= 5 ? <p className={styles.neutralAvg}>{professor.mediaQualidade}</p> : <p className={styles.chaoticAvg}>{professor.mediaQualidade}</p>}</Tooltip >
-              <Tooltip classes={{ arrow: toolTipClasses.arrow, tooltip: toolTipClasses.tooltip }} disableFocusListener disableTouchListener title="Facilidade" placement="top" arrow>{professor.mediaFacilitacao == null ? <p>X</p> : professor.mediaFacilitacao >= 7 ? <p className={styles.goodAvg}>{professor.mediaFacilitacao}</p> :professor.mediaFacilitacao >= 5 ? <p className={styles.neutralAvg}>{professor.mediaFacilitacao}</p> : <p className={styles.chaoticAvg}>{professor.mediaFacilitacao}</p>}</Tooltip >
-              <Tooltip classes={{ arrow: toolTipClasses.arrow, tooltip: toolTipClasses.tooltip }} disableFocusListener disableTouchListener title="Média" placement="top" arrow>{professor.mediaQualidade == null  ? <p>X</p> : ((professor.mediaQualidade + professor.mediaFacilitacao) / 2) >= 7 ? <p className={styles.goodAvg}>{((professor.mediaQualidade + professor.mediaFacilitacao) / 2)}</p> :((professor.mediaQualidade + professor.mediaFacilitacao) / 2) >= 5 ? <p className={styles.neutralAvg}>{((professor.mediaQualidade + professor.mediaFacilitacao) / 2)}</p> : <p className={styles.chaoticAvg}>{((professor.mediaQualidade + professor.mediaFacilitacao) / 2)}</p>}</Tooltip >
+              <Tooltip classes={{ arrow: toolTipClasses.arrow, tooltip: toolTipClasses.tooltip }} disableFocusListener disableTouchListener title="Qualidade" placement="top" arrow>{professor.mediaQualidade == null ? <p>X</p> : professor.mediaQualidade >= 7 ? <p className={styles.goodAvg}>{professor.mediaQualidade.toFixed(1)}</p> :professor.mediaQualidade >= 5 ? <p className={styles.neutralAvg}>{professor.mediaQualidade.toFixed(1)}</p> : <p className={styles.chaoticAvg}>{professor.mediaQualidade.toFixed(1)}</p>}</Tooltip >
+              <Tooltip classes={{ arrow: toolTipClasses.arrow, tooltip: toolTipClasses.tooltip }} disableFocusListener disableTouchListener title="Facilidade" placement="top" arrow>{professor.mediaFacilitacao == null ? <p>X</p> : professor.mediaFacilitacao >= 7 ? <p className={styles.goodAvg}>{professor.mediaFacilitacao.toFixed(1)}</p> :professor.mediaFacilitacao >= 5 ? <p className={styles.neutralAvg}>{professor.mediaFacilitacao.toFixed(1)}</p> : <p className={styles.chaoticAvg}>{professor.mediaFacilitacao.toFixed(1)}</p>}</Tooltip >
+              <Tooltip classes={{ arrow: toolTipClasses.arrow, tooltip: toolTipClasses.tooltip }} disableFocusListener disableTouchListener title="Média" placement="top" arrow>{professor.mediaQualidade == null  ? <p>X</p> : ((professor.mediaQualidade + professor.mediaFacilitacao) / 2) >= 7 ? <p className={styles.goodAvg}>{((professor.mediaQualidade + professor.mediaFacilitacao) / 2).toFixed(1)}</p> :((professor.mediaQualidade + professor.mediaFacilitacao) / 2) >= 5 ? <p className={styles.neutralAvg}>{((professor.mediaQualidade + professor.mediaFacilitacao) / 2).toFixed(1)}</p> : <p className={styles.chaoticAvg}>{((professor.mediaQualidade + professor.mediaFacilitacao) / 2).toFixed(1)}</p>}</Tooltip >
               </div>
             </div>
           </div>

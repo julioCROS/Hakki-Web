@@ -13,20 +13,28 @@ const apiUrl = 'https://hakki-api.herokuapp.com/professores';
 const useStyles = makeStyles(theme => ({
   arrow: {
     "&:before": {
-      border: "2px solid #f5f5f5"
+      border: "2px solid #c9c9c9"
     },
-    color: "#f5f5f5",
+    color: "#c9c9c9",
   },
   tooltip: {
-    backgroundColor: "white",
-    color: "black"
+    backgroundColor: "#c9c9c9",
+    color: "black",
+    fontSize: "15px",
+    margin: "10px",
+    padding: "10px",
+    paddingLeft: "25px",
+    paddingRight: "25px",
+    fontFamily: "Ubuntu",
+    fontWeight: "bold",
   }
 }));
 
 
-export default function ModalForms({ open, setOpen }) {
+export default function ModalProf({ open, setOpen }) {
   const [name, setName] = useState("");
   const [postRes, setPostRes] = useState("");
+  
   const toolTipClasses = useStyles();  
 
   function onCloseModal() {

@@ -1,0 +1,56 @@
+.modalTitle {
+  width: 100%;
+  margin-top: -20px;
+  margin-bottom: 20px;
+  margin-right: 260px;
+  font-size: 13px;
+  font-family: 'Ubuntu', sans-serif;
+  text-align: left;  
+  font-weight: lighter;
+}
+
+.modalBody {
+  width: 100%;
+  margin-top: -10px;
+  font-size: 15px;
+}
+
+.inputSend {
+  display:flex;
+  width: 100%;
+}
+
+.textBox {
+  margin-top: 10px;
+}
+
+.btn {
+  background-color: #404E82;
+  color: white;
+  border: none;
+  margin-top: 20px;
+  margin-left: 5px;
+  padding: 15px;
+  font-size: 17px;
+  font-family: 'Roboto', sans-serif;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.btn:active {
+  background-color: #bebebe;
+  color: #404E82;
+  box-shadow: 0 0 7px #5e5e5e77;
+}
+
+.response {
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: -20px;
+}
+
+.alert {
+  margin-top: -20px;
+  margin-bottom: 10px;
+}
