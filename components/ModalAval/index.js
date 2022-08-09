@@ -45,19 +45,14 @@ export default function ModalAval({ open, setOpen, professor_id }) {
 }
 
 function postAval(professor, qualidade, facilidade, comentario, setPostRes) {
-  console.log(qualidade, typeof qualidade);
-  console.log(facilidade, typeof facilidade);
-
   axios.post(apiUrl, {
     professor: professor,
     notaQualidade: Number(qualidade),
     notaFacilitacao: Number(facilidade),
     comentario: comentario
   }).then(res => {
-    console.log(res.status);
     setPostRes(res.status);
   }).catch(err => {
-    console.log(err);
     setPostRes(err.response.status);
   })
 }
