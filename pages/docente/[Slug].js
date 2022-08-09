@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { useState } from 'react';
+import { useEffect, useState} from 'react';
 import Head from 'next/head';
 import styles from '../../styles/Docente.module.css';
 import { makeStyles } from "@material-ui/core/styles";
@@ -36,17 +36,24 @@ Docente.getInitialProps = async (context) => {
   if (req) {
     let name  = req.url.split('/')[2];
     const response = await axios.get(apiUrl_professores + "/nome/" + name);
-    return { data: response.data };
+    return { data: response.data, name};
   }
 }
-  
 
-export default function Docente({ data }) { 
+export default function Docente({ data, name }) {
   const [open, setOpen] = useState(false);
   const [professor, setProfessor] = useState(data);
 
-  const toolTipClasses = useStyles();  
+  useEffect(() => {
+    refreshData();
+  }, [open]);
 
+  const refreshData = async () => {
+    const response = await axios.get(apiUrl_professores + "/nome/" + name);
+    setProfessor(response.data);
+  }
+
+  const toolTipClasses = useStyles();  
   const onOpenModal = () => setOpen(true);
 
   if(data.length === 0) {
@@ -75,7 +82,7 @@ export default function Docente({ data }) {
               <div className={styles.secondInfo}>
                 <div className={styles.reviewsInfo}><b>Avaliações:</b> {professor.reviews.length}</div>
                 <div className={styles.cadastrar} onClick={() => {onOpenModal()}}>Cadastrar avaliação</div>
-                <ModalAval open={open} setOpen={setOpen}  professor_id={professor._id}/>
+                <ModalAval open={open} setOpen={setOpen} professor_id={professor._id}/>
               </div>
             </div>
             <div className={styles.averages}>
