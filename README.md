@@ -1,3 +1,28 @@
+<p align = "center">
+<img width="170" src="https://github.com/julioCROS/Hakki-Extension/blob/main/images/hakki_title.png"></br>
+</p>
+
+## Cadastrando um novo nome e uma nova avaliação
+### Cadastrando um novo nome
+
+**1.** Acesse o sistema web do projeto através [deste link](https://hakki.vercel.app). </br>
+**2.** Clique em **`Cadastrar professor`**. </br>
+**3.** No modal que será aberto, digite o **nome completo** (assim como aparece na página de matriculas do SIGAA). </br>
+**4.** Após digitar o nome, clique no botão **`+`**. </br>
+**5.** Por fim, atualize a página e o nome cadastrado estará disponível na busca.
+>Caso o nome tenha sido cadastrado com sucesso, uma mensagem aparecerá informando-o(a) disso.
+
+### Cadastrando uma nova avaliação
+
+**1.** Acesse o sistema web do projeto através [deste link](https://hakki.vercel.app). </br>
+**2.** Procure pelo nome ao qual você quer cadastrar uma avaliação na barra de pesquisa. </br>
+**3.** Clique sobre o nome procurado. </br>
+**4.** Uma nova pagina irá carregar, nesta nova página clique em **`Cadastrar avaliação`**. </br>
+**5.** No modal que será aberto, preencha todos os campos. </br>
+**6.** Após preencher todos os campos clique em **`Enviar avaliação`**. </br>
+**7.** Por fim, atualize a página e a avaliação cadastrada estará disponível.
+>Caso a avaliação tenha sido cadastrada com sucesso, uma mensagem aparecerá informando-o(a) disso.
+
 ## Contribuindo com o projeto
 
 **1.** Primeiro, clone o projeto no diretório de sua preferência:
