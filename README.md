@@ -12,6 +12,9 @@
 **5.** Por fim, atualize a página e o nome cadastrado estará disponível na busca.
 >Caso o nome tenha sido cadastrado com sucesso, uma mensagem aparecerá informando-o(a) disso.
 
+</br>
+</br>
+
 ### Cadastrando uma nova avaliação
 
 **1.** Acesse o sistema web do projeto através [deste link](https://hakki.vercel.app). </br>
@@ -22,6 +25,9 @@
 **6.** Após preencher todos os campos clique em **`Enviar avaliação`**. </br>
 **7.** Por fim, atualize a página e a avaliação cadastrada estará disponível.
 >Caso a avaliação tenha sido cadastrada com sucesso, uma mensagem aparecerá informando-o(a) disso.
+
+</br>
+</br>
 
 ## Contribuindo com o projeto
 
