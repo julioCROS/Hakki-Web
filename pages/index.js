@@ -1,5 +1,5 @@
 import axios from 'axios';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
 import styles from '../styles/Home.module.css';
 
@@ -21,6 +21,15 @@ export default function Home({ data }) {
   const [open, setOpen] = useState(false);
   const [professoresSearch, setProfessoresSearch] = useState(data);
   const [page, setPage] = useState(1);
+
+  useEffect(() => {
+    refreshData();
+  }, [open]);
+
+  const refreshData = async () => {
+    const response = await axios.get(apiUrl);
+    setProfessoresSearch(response.data);
+  }
 
   const onOpenModal = () => setOpen(true);
   data = sortData(data);
@@ -44,7 +53,7 @@ export default function Home({ data }) {
           value={search}
           onChange={(newValue) => {
             setSearch(newValue);
-            setProfessoresSearch(searchQuery(newValue, data));
+            setProfessoresSearch(searchQuery(newValue, professoresSearch));
             setPage(1);
           }}
           onCancelSearch={() => {
@@ -52,9 +61,9 @@ export default function Home({ data }) {
             setProfessoresSearch(data);
             setPage(1);
           }}
-        />       
+        />
         <p className={styles.cadastrar} onClick={() => {onOpenModal()}}>Cadastrar professor</p>
-        <ModalProf open={open} setOpen={setOpen} />
+        <ModalProf open={open} setOpen={setOpen} setSearch={setSearch}/>
         <SearchResult professoresSearch={professoresSearch} data={data} page={page} setPage={setPage} search={search} />
       </main>
       <Extension />
