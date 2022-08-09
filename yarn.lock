@@ -852,14 +852,6 @@ csstype@^3.0.2, csstype@^3.1.0:
   resolved "https://registry.yarnpkg.com/csstype/-/csstype-3.1.0.tgz#4ddcac3718d787cf9df0d1b7d15033925c8f29f2"
   integrity sha512-uX1KG+x9h5hIJsaKR9xHUeUraxf8IODOwq9JLNPq6BwB04a/xgpq3rcx47l5BZu5zBPlgD342tdke3Hom/nJRA==
 
-current-url@^2.1.2:
-  version "2.1.2"
-  resolved "https://registry.yarnpkg.com/current-url/-/current-url-2.1.2.tgz#8128d11b674eb3c76d1bdfd6cf6eaf32929f31a3"
-  integrity sha512-KB+U4yu0RUlt3oPUu2X31mFNihkXCk23/jPfSisNHpDftpuV2ZhG6w9CwmdSnObzbJQYG7kUMULyAyBX8t637Q==
-  dependencies:
-    get-request-origin "^1.0.1"
-    original-url "^1.2.3"
-
 damerau-levenshtein@^1.0.8:
   version "1.0.8"
   resolved "https://registry.yarnpkg.com/damerau-levenshtein/-/damerau-levenshtein-1.0.8.tgz#b43d286ccbd36bc5b2f7ed41caf2d0aba1f8a6e7"
@@ -1290,11 +1282,6 @@ form-data@^4.0.0:
     combined-stream "^1.0.8"
     mime-types "^2.1.12"
 
-forwarded-parse@^2.1.0:
-  version "2.1.2"
-  resolved "https://registry.yarnpkg.com/forwarded-parse/-/forwarded-parse-2.1.2.tgz#08511eddaaa2ddfd56ba11138eee7df117a09325"
-  integrity sha512-alTFZZQDKMporBH77856pXgzhEzaUVmLCDk+egLgIgHst3Tpndzz8MnKe+GzRJRfvVdn69HhpW7cmXzvtLvJAw==
-
 fs.realpath@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/fs.realpath/-/fs.realpath-1.0.0.tgz#1504ad2523158caa40db4a2787cb01411994ea4f"
@@ -1333,11 +1320,6 @@ get-intrinsic@^1.0.2, get-intrinsic@^1.1.0, get-intrinsic@^1.1.1:
     function-bind "^1.1.1"
     has "^1.0.3"
     has-symbols "^1.0.3"
-
-get-request-origin@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/get-request-origin/-/get-request-origin-1.0.1.tgz#bb48eeef31280e7627a9b13d5557346b50531648"
-  integrity sha512-7TgRb2DU6m4uUnZUgzI+hKG69HHcmwY7j2YsBZecSU+kV8yvWWHNROnd7GM3F4bJqq4+21uQYZkFUEBD5LBmxg==
 
 get-symbol-description@^1.0.0:
   version "1.0.0"
@@ -1949,13 +1931,6 @@ optionator@^0.9.1:
     prelude-ls "^1.2.1"
     type-check "^0.4.0"
     word-wrap "^1.2.3"
-
-original-url@^1.2.3:
-  version "1.2.3"
-  resolved "https://registry.yarnpkg.com/original-url/-/original-url-1.2.3.tgz#133aff4b2d27e38a98d736f7629c56262b7153e1"
-  integrity sha512-BYm+pKYLtS4mVe/mgT3YKGtWV5HzN/XKiaIu1aK4rsxyjuHeTW9N+xVBEpJcY1onB3nccfH0RbzUEoimMqFUHQ==
-  dependencies:
-    forwarded-parse "^2.1.0"
 
 p-limit@^1.1.0:
   version "1.3.0"
