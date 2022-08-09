@@ -31,16 +31,17 @@ const useStyles = makeStyles(theme => ({
 }));
 
 
-export default function ModalProf({ open, setOpen }) {
+export default function ModalProf({ open, setOpen, setSearch }) {
   const [name, setName] = useState("");
   const [postRes, setPostRes] = useState("");
   
-  const toolTipClasses = useStyles();  
+  const toolTipClasses = useStyles();
 
   function onCloseModal() {
     setName("");
     setPostRes("");
     setOpen(false);
+    setSearch("");
   }
 
   return(
@@ -72,7 +73,6 @@ function postName(name, setPostRes) {
     setPostRes(err.response.status);
   });
 }
-
 
 function renderSucess(){
   return (
